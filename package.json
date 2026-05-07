@@ -1,0 +1,9 @@
+{
+  "name": "singasong",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Buscador en browser para localizar libros agotados y difíciles de encontrar.",
+  "scripts": {
+    "test": "node scripts/validate-content.mjs"
+  }
+}
