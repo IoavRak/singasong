@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Outprint ayuda a localizar libros agotados, raros y difíciles de encontrar en marketplaces de segunda mano."
+    />
+    <title>Outprint · Buscador de libros difíciles</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div class="eyebrow">✦ Buscador especializado para libros agotados</div>
+        <div class="hero-grid">
+          <div>
+            <h1>Encuentra libros difíciles de conseguir sin perder precisión.</h1>
+            <p>
+              Outprint construye búsquedas exactas para marketplaces de libros usados, raros o
+              descatalogados y te ayuda a validar si el resultado corresponde a la edición que buscas.
+            </p>
+          </div>
+          <div class="trust-card">
+            <span class="card-icon">✓</span>
+            <strong>Enfoque de precisión</strong>
+            <span>ISBN primero, título exacto, autor y datos de edición como señales de confianza.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-panel" aria-labelledby="search-title">
+        <div class="panel-header">
+          <div>
+            <span class="section-kicker">Búsqueda guiada</span>
+            <h2 id="search-title">Datos del libro</h2>
+          </div>
+          <div class="score" aria-live="polite">
+            🎯 <span id="precision-score">0% precisión estimada</span>
+          </div>
+        </div>
+
+        <form class="book-form" id="book-form">
+          <label>
+            Título
+            <input name="title" value="El mundo de ayer" placeholder="Título exacto" />
+          </label>
+          <label>
+            Autor
+            <input name="author" value="Stefan Zweig" placeholder="Nombre del autor" />
+          </label>
+          <label>
+            ISBN
+            <input name="isbn" placeholder="ISBN-10 o ISBN-13" />
+          </label>
+          <label>
+            Editorial
+            <input name="publisher" placeholder="Opcional" />
+          </label>
+          <label>
+            Año
+            <input name="year" placeholder="Opcional" inputmode="numeric" />
+          </label>
+        </form>
+
+        <div class="query-preview">
+          🔎 <span id="query-preview">Completa al menos título, autor o ISBN.</span>
+        </div>
+      </section>
+
+      <section class="results-panel" aria-labelledby="marketplaces-title">
+        <div class="panel-header">
+          <div>
+            <span class="section-kicker">Rutas de búsqueda</span>
+            <h2 id="marketplaces-title">Abrir en plataformas recomendadas</h2>
+          </div>
+        </div>
+
+        <div class="marketplace-grid" id="marketplace-grid"></div>
+      </section>
+
+      <section class="precision-panel" aria-labelledby="precision-title">
+        <div>
+          <span class="section-kicker">Método</span>
+          <h2 id="precision-title">Cómo mantener resultados precisos</h2>
+        </div>
+        <ol>
+          <li>Prioriza ISBN-10 o ISBN-13 cuando lo tengas: reduce falsos positivos por traducciones o reediciones.</li>
+          <li>Usa el título exacto entre comillas y agrega autor, editorial o año si el título es común.</li>
+          <li>Compara edición, encuadernación y estado antes de contactar al vendedor.</li>
+        </ol>
+      </section>
+    </main>
+    <script defer src="src/main.js"></script>
+  </body>
+</html>
