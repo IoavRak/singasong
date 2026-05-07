@@ -1,0 +1,13 @@
+{
+  "name": "singasong",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Buscador preciso para localizar libros agotados y difíciles de encontrar en marketplaces de segunda mano.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "open": "node scripts/serve.mjs --open",
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/validate-content.mjs",
+    "package": "node scripts/package-download.mjs"
+  }
+}
